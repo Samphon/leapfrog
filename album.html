@@ -5,13 +5,18 @@
 		<title>欢迎进入我呱儿子的相册</title>
 		<style type="text/css">
 			body{
-				background:url("img/照片/照片背景.png");
-
+				background-image: url(img/照片/照片背景.png);
+				background-size: cover;
+  				background-repeat: no-repeat;
+				height: 100%;
+				width: 100%;
+				margin: 0;
+				padding: 0;
 			}
 			.img-size{
-				float:left;
+				position: relative;
 				height: auto;
-				width: 24%;
+				width: 23%;
 				margin:5px;
 			}
 			#playBt{
@@ -38,7 +43,7 @@
 		</style>
 	</head>
 	<body>
-		<div>
+		<div align="center">
 			<img src="img/照片/1.jpg" class="img-size"/>
 			<img src="img/照片/2.jpg" class="img-size"/>
 			<img src="img/照片/3.jpg" class="img-size"/>
