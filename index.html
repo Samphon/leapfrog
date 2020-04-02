@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>欢迎来到txf的呱儿子主页 </title>
+		<style type="text/css">
+				.img-center{
+					position: absolute;
+					top:0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+				}
+			</style>
+	</head>
+	<body  style="background-image: url(img/背景1.png);background-repeat: no-repeat;background-position: center;background: cover;">
+		<div align="center">
+			<p>
+				<img style="margin-top: 180px;" src="img/我的主页.png" />
+				<br />
+				<a href="图片展示.html">
+					<img src="img/我要进去.png" />
+				</a>
+			</p>
+		</div>
+		<button style="position:absolute;right:50px;top:50px;background-color:rgba(0,0,0,0.1);border-style:hidden" onclick="pauseau()">
+			<img src="img/播放按钮.png" style="height:50px;width:50px"/>
+		</button>
+		<audio id="mp3" autoplay="ture" loop="ture">
+			<source src="js/青蛙旅行BGM.mp3" type="audio/mp3">
+		</audio>
+		
+		<script>
+		var mymp3=document.getElementById("mp3");
+		function pauseau()
+		{
+			if(mymp3.paused)
+			{mymp3.play();}
+			else
+			{mymp3.pause();}
+		}
+		</script>
+	</body>
+</html>
