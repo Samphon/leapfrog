@@ -1,85 +1,82 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8" />
-		<title>欢迎来到txf的呱儿子主页 </title>
-		<style type="text/css">
-			body{
-				height: 100%;
-				width: 100%;
-				margin:0;
-			}
-			#wrap{
-				background: url(img/background.jpg) no-repeat center;
-				background-color:rgba(255,0,0,0.1);
-				position:absolute;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				background-size: 100% 150%;
-				background-blend-mode: multiply;
-				filter: blur(2px);
-				overflow: hidden;
-				z-index: -1;
-			}
-			#main{
-				position: inherit;
-				align-self: center;
-				margin-top: 15%;
-			}
-			#playBt{
-				position:fixed;
-				right:50px;
-				top:50px;
-				background-color:rgba(0,0,0,0);
-				border-style:hidden;
-				animation: turn 3s linear infinite; 
-			}
-			@keyframes turn{
-					from {
-						transform: rotate(0deg);
-					}
-					to {
-						transform: rotate(360deg);
-					}
-					/*0%{-webkit-transform:rotate(0deg);}
-					25%{-webkit-transform:rotate(90deg);}
-					50%{-webkit-transform:rotate(180deg);}
-					75%{-webkit-transform:rotate(270deg);}
-					100%{-webkit-transform:rotate(360deg);}*/
-			}
-		</style>
-	</head>
-	<body>
-		<div id="wrap" ></div>
-		<div id="main" align="center">
-			<p>
-				<img src="img/我的主页.png" />
-				<br />
-				<a href="album.html">
-					<img src="img/我要进去.png" />
-				</a>
-			</p>
-		</div>
-		<img id="playBt" onclick="pauseau()" src="img/播放按钮.png" style="height:50px;width:50px"/>
-		<audio id="mp3" autoplay="ture" loop="ture">
-			<source src="res/青蛙旅行BGM.mp3" type="audio/mp3">
-		</audio>
-		
-		<script>
-		var mymp3=document.getElementById("mp3");
-		var playbt=document.getElementById("playBt");
-		function pauseau()
-		{
-			if(mymp3.paused){
-				mymp3.play();
-				playbt.style.animation = 'turn 3s linear infinite';
-			}
-			else{
-				mymp3.pause();
-				playbt.style.animation = 'none';
-			}
+
+<head>
+	<meta charset="utf-8" />
+	<title>欢迎来到txf的呱儿子主页 </title>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
 		}
-		</script>
-	</body>
+
+		body {
+			width: 100%;
+			height: 100%;
+		}
+
+		body:after {
+			content: "";
+			background-color: rgba(255, 0, 0, 0.1);
+			background: url(img/background.jpg) no-repeat center fixed;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-size: 100% 150%;
+			background-blend-mode: multiply;
+			filter: blur(2px);
+			overflow: hidden;
+			z-index: -1;
+		}
+		.main {
+			width: 1000px;
+			margin: 20% auto 0;
+		}
+		.h {
+			height: 111px;
+			width: 381px;
+			margin: 0 auto;
+			background: url(img/我的主页.png) no-repeat center;
+		}
+		a {
+			display: block;
+			height: 57px;
+			width: 134px;
+			font-size: 0px;
+			margin: 0 auto;
+			background: url(img/我要进去.png) no-repeat center;
+		}
+		a:hover {
+			height: 50px;
+			width: 128px;
+			margin: 0 auto;
+			font: bold 30px/52px Blippo,fantasy;
+			text-decoration-line: none;
+			text-align: center;
+			color: #101010;
+			border: 3px solid #303030;
+			border-radius:  28px 28px;
+			background: none;
+			background-color: #fff;
+
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/both.css">
+	<script type="text/javascript" src="js/play.js"></script>
+</head>
+
+<body>
+	<div class="main">
+		<div class="h"></div>
+		<br/>
+		<a href="album.html">GO</a>
+	</div>
+	<img class="playBtn playBtn_stopturn" onclick="pauseau()" />
+	<audio id="mp3" autoplay="ture" loop="ture">
+		<source type="audio/mp3" src="res/青蛙旅行BGM.mp3">
+	</audio>
+</body>
+
 </html>
