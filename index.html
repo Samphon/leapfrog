@@ -32,7 +32,13 @@
 		}
 		.main {
 			width: 1000px;
-			margin: 20% auto 0;
+			margin: 10% auto 0;
+		}
+		.logo {
+			height: 108px;
+			width: 150px;
+			margin: 0 auto -20px;
+			background: url(img/logo.png) center/cover no-repeat;
 		}
 		.h {
 			height: 111px;
@@ -69,12 +75,13 @@
 
 <body>
 	<div class="main">
+		<div class="logo"></div>
 		<div class="h"></div>
 		<br/>
 		<a href="album.html">GO</a>
 	</div>
 	<img class="playBtn playBtn_stopturn" onclick="pauseau()" />
-	<audio id="mp3" autoplay="ture" loop="ture">
+	<audio id="mp3" loop="ture">
 		<source type="audio/mp3" src="res/青蛙旅行BGM.mp3">
 	</audio>
 </body>
